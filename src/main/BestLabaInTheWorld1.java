@@ -76,11 +76,11 @@ public class BestLabaInTheWorld1 {
         for (double[] i : table) {
             for (double j : i) {
                 if (j > 0) {
-                    System.out.printf(" %.5f ", j);
+                    System.out.printf("%.5f  ", j);
                 } else if (j < 0) {
                     System.out.printf("%.5f ", j);
                 } else {
-                    System.out.print(j + "     ");
+                    System.out.print(j + "      ");
                 }
 
             }
