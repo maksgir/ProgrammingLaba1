@@ -1,6 +1,9 @@
 import java.util.Random;
 import java.util.stream.IntStream;
 
+/**
+ * Main class
+ */
 public class BestLabaInTheWorld1 {
     public static short[] CreatingFirstMass() {
         short[] a = new short[20];
@@ -63,16 +66,7 @@ public class BestLabaInTheWorld1 {
         int[] n = {4, 8, 9, 10, 12, 14, 15, 16, 17, 19};
         return IntStream.of(n).anyMatch(a -> a == x);
     }
-
-    public static void main(String[] args) {
-        float min = -10;
-        float max = 6;
-
-
-        short[] a = CreatingFirstMass();
-        float[] x = CreatingSecondMass(min, max);
-        double[][] table = CreatingThirdMass(a, x);
-
+    public static void PrintThirdMass(short[] a, float[] x, double[][] table) {
         for (double[] i : table) {
             for (double j : i) {
                 if (j > 0) {
@@ -86,6 +80,18 @@ public class BestLabaInTheWorld1 {
             }
             System.out.println();
         }
+    }
+    public static void main(String[] args) {
+        float min = -10;
+        float max = 6;
+
+
+        short[] a = CreatingFirstMass();
+        float[] x = CreatingSecondMass(min, max);
+        double[][] table = CreatingThirdMass(a, x);
+
+        PrintThirdMass(a, x, table);
+
     }
 
 }
